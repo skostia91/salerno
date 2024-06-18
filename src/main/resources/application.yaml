@@ -3,4 +3,19 @@ spring:
     url: jdbc:postgresql://localhost:5432/my_db
     username: root
     password: 12345
-
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+        format_sql: true
+server:
+  port: 8085
+  servlet:
+    context-path: /salerno
+logging:
+  level:
+    root: info
+  file:
+    name: logs.log
+    path: /
